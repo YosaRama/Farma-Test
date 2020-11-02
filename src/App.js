@@ -1,77 +1,19 @@
 import React from "react";
 import "./App.css";
 
-import { Layout, Menu, Breadcrumb, Divider, Row, Col } from "antd";
-import {
-  DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-import Avatar from "antd/lib/avatar/avatar";
+import TheSidebar from "./containers/TheSidebar";
+import TheContent from "./containers/TheContent";
 
-const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
+import { Layout } from "antd";
+import TheFooter from "./containers/TheFooter";
 
 export default function App() {
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Sider>
-        <div className="logo">
-          <img src="img/logo_white.png" alt="logo" />
-        </div>
-        <Row>
-          <Col>
-            <Avatar size="large">R</Avatar>
-          </Col>
-          <Col>
-            <h3 style={{ color: "#ffffff", textAlign: "center" }}>Rizal</h3>
-          </Col>
-        </Row>
-
-        <Divider style={{ border: "solid 1px #ffffff" }} />
-        <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-          <Menu.Item key="1" icon={<PieChartOutlined />}>
-            Option 1
-          </Menu.Item>
-          <Menu.Item key="2" icon={<DesktopOutlined />}>
-            Option 2
-          </Menu.Item>
-          <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-            <Menu.Item key="3">Tom</Menu.Item>
-            <Menu.Item key="4">Bill</Menu.Item>
-            <Menu.Item key="5">Alex</Menu.Item>
-          </SubMenu>
-          <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-            <Menu.Item key="6">Team 1</Menu.Item>
-            <Menu.Item key="8">Team 2</Menu.Item>
-          </SubMenu>
-          <Menu.Item key="9" icon={<FileOutlined />}>
-            Files
-          </Menu.Item>
-        </Menu>
-      </Sider>
+      <TheSidebar />
       <Layout className="site-layout">
-        <Header
-          className="site-layout-background"
-          style={{ padding: 0, backgroundColor: "#ffffff" }}
-        />
-        <Content style={{ margin: "0 16px" }}>
-          <Breadcrumb style={{ margin: "16px 0" }}>
-            <Breadcrumb.Item>User</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-          </Breadcrumb>
-          <div
-            className="site-layout-background"
-            style={{ padding: 24, minHeight: 360 }}
-          >
-            Bill is a cat.
-          </div>
-        </Content>
-        <Footer style={{ textAlign: "center" }}>
-          Ant Design ©2018 Created by Ant UED
-        </Footer>
+        <TheContent />
+        <TheFooter />
       </Layout>
     </Layout>
   );
