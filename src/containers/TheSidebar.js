@@ -7,16 +7,15 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import Avatar from "antd/lib/avatar/avatar";
+import "./TheSidebar.css";
 
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 export default function TheSidebar() {
   return (
-    <Sider>
-      <div className="logo">
-        <img src="img/logo_white.png" alt="logo" />
-      </div>
+    <Sider collapsible>
+      <div className="logo" />
       <Row>
         <Col>
           <Avatar size="large">R</Avatar>
