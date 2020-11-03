@@ -14,14 +14,22 @@ const { SubMenu } = Menu;
 
 export default function TheSidebar() {
   return (
-    <Sider collapsible>
+    <Sider
+      collapsible
+      breakpoint="lg"
+      collapsedWidth="0"
+      zeroWidthTriggerStyle={{ top: "90%" }}
+    >
       <div className="logo" />
-      <Row>
+      <p className="logo_text">Apotik Rizal</p>
+      <Row justify="left">
         <Col>
-          <Avatar size="large">R</Avatar>
+          <Avatar className="avatar" size="large">
+            <strong>R</strong>
+          </Avatar>
         </Col>
-        <Col>
-          <h3 style={{ color: "#ffffff", textAlign: "center" }}>Rizal</h3>
+        <Col className="user">
+          <h3>Rizal</h3>
         </Col>
       </Row>
 

@@ -9,31 +9,47 @@ export default function FormAdd() {
   return (
     <Form>
       <Row gutter={6}>
-        <Col span={4}>
-          <Form.Item>
-            <Input placeholder="Nama Barang" name="nama_barang" />
+        <Col lg={4} sm={24}>
+          <Form.Item
+            name="nama_barang"
+            rules={[
+              {
+                required: true,
+                message: "Please input name!",
+              },
+            ]}
+          >
+            <Input placeholder="Nama Barang" />
           </Form.Item>
         </Col>
-        <Col span={4}>
-          <Form.Item>
-            <Input placeholder="Batch" name="batch" />
+        <Col lg={4} sm={24}>
+          <Form.Item name="batch">
+            <Input placeholder="Batch" />
           </Form.Item>
         </Col>
-        <Col span={3}>
-          <Form.Item>
+        <Col lg={3} sm={24}>
+          <Form.Item
+            name="date"
+            rules={[
+              {
+                required: true,
+                message: "Please input date!",
+              },
+            ]}
+          >
             <Row>
-              <Col span={12}>
+              <Col lg={12} sm={24}>
                 <Input placeholder="MM" name="month" />
               </Col>
-              <Col span={12}>
+              <Col lg={12} sm={24}>
                 <Input placeholder="DD" name="month" />
               </Col>
             </Row>
           </Form.Item>
         </Col>
-        <Col span={3}>
+        <Col lg={3} sm={24}>
           <Form.Item
-            name="qty"
+            name="price"
             rules={[
               {
                 required: true,
@@ -41,55 +57,52 @@ export default function FormAdd() {
               },
             ]}
           >
-            <Input type="number" addonBefore="IDR" style={{ width: "100%" }} />
+            <Input
+              type="number"
+              addonBefore="IDR"
+              style={{ width: "100%" }}
+              placeholder="0"
+            />
           </Form.Item>
         </Col>
-        <Col span={1}>
-          <Form.Item>
-            <Input type="number" />
+        <Col lg={1} sm={24}>
+          <Form.Item name="qty">
+            <Input type="number" placeholder="0" />
           </Form.Item>
         </Col>
-        <Col span={3}>
-          <Form.Item>
-            <Select>
+        <Col lg={2} sm={24}>
+          <Form.Item name="type">
+            <Select defaultValue="Pcs">
               <Option>Pcs</Option>
             </Select>
           </Form.Item>
         </Col>
-        <Col span={2}>
-          <Form.Item
-            name="diskon"
-            rules={[
-              {
-                required: true,
-                message: "Please input your phone number!",
-              },
-            ]}
-          >
+        <Col lg={3} sm={24}>
+          <Form.Item name="diskon">
             <Input
               type="number"
+              placeholder="0"
               addonBefore={
                 <Form.Item name="prefix" noStyle>
-                  <Select style={{ width: 60 }}>
+                  <Select style={{ width: 55 }} defaultValue="%">
                     <Option value="%">%</Option>
                   </Select>
                 </Form.Item>
               }
-              style={{ width: "100%" }}
             />
           </Form.Item>
         </Col>
-        <Col span={4}>
+        <Col lg={4} sm={24}>
           <Row>
-            <Col span={12}>
+            <Col lg={12} sm={24}>
               <h3>IDR</h3>
             </Col>
-            <Col span={12}>
+            <Col lg={12} sm={24}>
               <Row>
-                <Col span={12}>
+                <Col lg={12} sm={12}>
                   <h3>0</h3>
                 </Col>
-                <Col span={12}>
+                <Col lg={12} sm={12}>
                   <Button>
                     <DeleteOutlined style={{ fontSize: "25px" }} />
                   </Button>

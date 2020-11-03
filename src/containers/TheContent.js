@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Layout, Row, Col, Card, Button } from "antd";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 import SupplierCard from "../component/SupplierCard";
 import PembelianCard from "../component/PembelianCard";
 import BarangCard from "../component/BarangCard";
@@ -10,9 +11,12 @@ const { Content } = Layout;
 export default function TheContent() {
   return (
     <Content style={{ margin: "0 16px" }}>
-      <h5>Faktur Pembelian</h5>
+      <h5>
+        <ArrowLeftOutlined />
+        Faktur Pembelian
+      </h5>
       <Row>
-        <Col span={20}>
+        <Col lg={20} sm={24}>
           <h1 style={{ fontSize: "30px" }}>
             <strong>Catat faktur pembelian</strong>
           </h1>
@@ -35,18 +39,18 @@ export default function TheContent() {
       >
         <div className="site-card-wrapper">
           <Row gutter={16}>
-            <Col span={12}>
+            <Col lg={12} sm={24} style={{ marginTop: 16 }}>
               <Card bordered={false}>
                 <SupplierCard />
               </Card>
             </Col>
-            <Col span={12}>
+            <Col lg={12} sm={24} style={{ marginTop: 16 }}>
               <Card bordered={false}>
                 <PembelianCard />
               </Card>
             </Col>
           </Row>
-          <Col span={24}>
+          <Col lg={24}>
             <BarangCard />
           </Col>
         </div>

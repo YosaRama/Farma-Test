@@ -21,7 +21,7 @@ export default function SupplierCard() {
         <Input />
       </Form.Item>
       <Row gutter={16}>
-        <Col span={15}>
+        <Col lg={15} sm={24}>
           <Form.Item
             name="supplier"
             rules={[
@@ -37,7 +37,7 @@ export default function SupplierCard() {
             <Input placeholder="No.Faktur" />
           </Form.Item>
         </Col>
-        <Col span={5}>
+        <Col lg={5} sm={24}>
           <Form.Item name="supplier">
             <label>Harga Termasuk PPN</label>
             <Select>

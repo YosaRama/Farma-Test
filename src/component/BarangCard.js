@@ -6,14 +6,14 @@ import TotalSection from "./TotalSection";
 
 export default function BarangCard() {
   const table_header = [
-    { title: "Barang", span: 4 },
-    { title: "Batch", span: 4 },
-    { title: "ED", span: 3 },
-    { title: "Harga@", span: 3 },
-    { title: "Qty", span: 1 },
-    { title: "Satuan", span: 3 },
-    { title: "Diskon", span: 2 },
-    { title: "Subtotal", span: 4 },
+    { title: "Barang", lg: 4 },
+    { title: "Batch", lg: 4 },
+    { title: "ED", lg: 3 },
+    { title: "Harga@", lg: 3 },
+    { title: "Qty", lg: 1 },
+    { title: "Satuan", lg: 2 },
+    { title: "Diskon", lg: 3 },
+    { title: "Subtotal", lg: 4 },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function BarangCard() {
       <Row>
         {table_header.map((item, index) => {
           return (
-            <Col key={index} span={item.span}>
+            <Col key={index} lg={item.lg} sm={item.sm}>
               <strong>{item.title}</strong>
             </Col>
           );
