@@ -1,13 +1,13 @@
 import React from "react";
 import FormAdd from "./FormAdd";
 
-import { Row, Card, Col, Divider } from "antd";
+import { Row, Card, Col, Divider, Form } from "antd";
 import TotalSection from "./TotalSection";
 
 export default function BarangCard() {
   const table_header = [
-    { title: "Barang", lg: 4 },
-    { title: "Batch", lg: 4 },
+    { title: "Barang", lg: 3 },
+    { title: "Batch", lg: 3 },
     { title: "ED", lg: 3 },
     { title: "Harga@", lg: 3 },
     { title: "Qty", lg: 1 },
@@ -28,7 +28,23 @@ export default function BarangCard() {
         })}
       </Row>
       <Divider />
-      <FormAdd />
+      <Form>
+        <Form.List name="item">
+          {(fields, { add, remove }, { errors }) => (
+            <>
+              <FormAdd onAdd={() => add()} />
+              {fields.map((field, index) => (
+                <FormAdd
+                  {...field}
+                  key={field.key}
+                  onDelete={() => remove(field.name)}
+                  onAdd={() => add()}
+                />
+              ))}
+            </>
+          )}
+        </Form.List>
+      </Form>
       <Divider />
       <TotalSection />
     </Card>

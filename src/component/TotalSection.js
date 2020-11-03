@@ -50,8 +50,8 @@ export default function TotalSection() {
               type="number"
               placeholder="0"
               addonBefore={
-                <Form.Item name="prefix" noStyle>
-                  <Select style={{ width: 55 }} defaultValue="%">
+                <Form.Item noStyle>
+                  <Select style={{ width: 55 }}>
                     <Option value="%">%</Option>
                   </Select>
                 </Form.Item>

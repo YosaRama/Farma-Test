@@ -3,13 +3,17 @@ import React from "react";
 import { Col, Row, Select, Form, DatePicker } from "antd";
 const { Option } = Select;
 
-
 export default function PembelianCard() {
   return (
-    <Form>
+    <Form
+      name="purchase_type"
+      initialValues={{
+        remember: true,
+      }}
+    >
       <Row>
         <Col span={4}>
-          <Form.Item name="supplier">
+          <Form.Item>
             <label>Pembayaran</label>
             <Select>
               <Option value="kredit">Kredit</Option>
@@ -28,7 +32,7 @@ export default function PembelianCard() {
         </Col>
         <Col span={6}>
           <Form.Item>
-            <label>Tanggal pembelian</label>
+            <label>Jatuh tempo</label>
             <br />
             <DatePicker format="DD-MM-YYYY" />
           </Form.Item>

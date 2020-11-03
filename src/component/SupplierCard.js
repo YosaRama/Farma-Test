@@ -5,9 +5,13 @@ const { Option } = Select;
 
 export default function SupplierCard() {
   return (
-    <Form>
+    <Form
+      name="supplier"
+      initialValues={{
+        remember: true,
+      }}
+    >
       <Form.Item
-        name="supplier"
         rules={[
           {
             required: true,
@@ -23,11 +27,10 @@ export default function SupplierCard() {
       <Row gutter={16}>
         <Col lg={15} sm={24}>
           <Form.Item
-            name="supplier"
             rules={[
               {
                 required: true,
-                message: "Please input supllier here!",
+                message: "Please input Invoice Number!",
               },
             ]}
           >
@@ -38,7 +41,7 @@ export default function SupplierCard() {
           </Form.Item>
         </Col>
         <Col lg={5} sm={24}>
-          <Form.Item name="supplier">
+          <Form.Item>
             <label>Harga Termasuk PPN</label>
             <Select>
               <Option value="ya">Ya</Option>
