@@ -1,13 +1,17 @@
 import React from "react";
 
 import { Layout, Row, Col, Card, Button } from "antd";
+import SupplierCard from "../component/SupplierCard";
+import PembelianCard from "../component/PembelianCard";
+import BarangCard from "../component/BarangCard";
+
 const { Content } = Layout;
 
 export default function TheContent() {
   return (
     <Content style={{ margin: "0 16px" }}>
       <h5>Faktur Pembelian</h5>
-      <Row gutter={16}>
+      <Row>
         <Col span={20}>
           <h1 style={{ fontSize: "30px" }}>
             <strong>Catat faktur pembelian</strong>
@@ -32,20 +36,18 @@ export default function TheContent() {
         <div className="site-card-wrapper">
           <Row gutter={16}>
             <Col span={12}>
-              <Card title="Card title" bordered={false}>
-                Card content
+              <Card bordered={false}>
+                <SupplierCard />
               </Card>
             </Col>
             <Col span={12}>
-              <Card title="Card title" bordered={false}>
-                Card content
+              <Card bordered={false}>
+                <PembelianCard />
               </Card>
             </Col>
           </Row>
           <Col span={24}>
-            <Card title="Card title" bordered={false} style={{ marginTop: 16 }}>
-              Card content
-            </Card>
+            <BarangCard />
           </Col>
         </div>
       </div>

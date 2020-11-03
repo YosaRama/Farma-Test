@@ -5,7 +5,6 @@ import TheSidebar from "./containers/TheSidebar";
 import TheContent from "./containers/TheContent";
 
 import { Layout } from "antd";
-import TheFooter from "./containers/TheFooter";
 
 export default function App() {
   return (
@@ -13,7 +12,6 @@ export default function App() {
       <TheSidebar />
       <Layout className="site-layout">
         <TheContent />
-        <TheFooter />
       </Layout>
     </Layout>
   );
