@@ -81,7 +81,7 @@ export default function FormAdd(props) {
             placeholder="0"
             addonBefore={
               <Form.Item noStyle>
-                <Select style={{ width: 55 }}>
+                <Select style={{ width: 55 }} defaultValue="%">
                   <Option value="%">%</Option>
                 </Select>
               </Form.Item>

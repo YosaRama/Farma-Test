@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import FormAdd from "./FormAdd";
 
 import { Row, Card, Col, Divider, Form } from "antd";
 import TotalSection from "./TotalSection";
 
-export default function BarangCard() {
+export default function BarangCard(props) {
   const table_header = [
     { title: "Barang", lg: 3 },
     { title: "Batch", lg: 3 },
@@ -15,6 +15,11 @@ export default function BarangCard() {
     { title: "Diskon", lg: 3 },
     { title: "Subtotal", lg: 4 },
   ];
+
+  const ppnStatus = props.status;
+  const purchase_type = props.type;
+
+  const [count, setCount] = useState(0);
 
   return (
     <Card bordered={false} style={{ marginTop: 16 }}>
@@ -33,20 +38,23 @@ export default function BarangCard() {
           {(fields, { add, remove }, { errors }) => (
             <>
               <FormAdd onAdd={() => add()} />
-              {fields.map((field, index) => (
-                <FormAdd
-                  {...field}
-                  key={field.key}
-                  onDelete={() => remove(field.name)}
-                  onAdd={() => add()}
-                />
-              ))}
+              {setCount(fields.length + 1)}
+              {fields.map((field, index) => {
+                return (
+                  <FormAdd
+                    {...field}
+                    key={field.key}
+                    onDelete={() => remove(field.name)}
+                    onAdd={() => add()}
+                  />
+                );
+              })}
             </>
           )}
         </Form.List>
       </Form>
       <Divider />
-      <TotalSection />
+      <TotalSection status={ppnStatus} type={purchase_type} count={count} />
     </Card>
   );
 }

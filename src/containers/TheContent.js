@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Layout, Row, Col, Card, Button } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";
@@ -9,6 +9,16 @@ import BarangCard from "../component/BarangCard";
 const { Content } = Layout;
 
 export default function TheContent() {
+  const [ppnType, setPpnType] = useState("Tidak");
+  const [purchaseType, setPurchaseType] = useState("");
+
+  function handleChangeStatus(value) {
+    setPpnType(value);
+  }
+  function handleChangeType(value) {
+    setPurchaseType(value);
+  }
+
   return (
     <Content style={{ margin: "0 16px" }}>
       <h5>
@@ -41,17 +51,20 @@ export default function TheContent() {
           <Row gutter={16}>
             <Col lg={12} sm={24} style={{ marginTop: 16 }}>
               <Card bordered={false}>
-                <SupplierCard />
+                <SupplierCard onChange={handleChangeStatus} />
               </Card>
             </Col>
             <Col lg={12} sm={24} style={{ marginTop: 16 }}>
               <Card bordered={false}>
-                <PembelianCard />
+                <PembelianCard
+                  onChange={handleChangeType}
+                  type={purchaseType}
+                />
               </Card>
             </Col>
           </Row>
           <Col lg={24}>
-            <BarangCard />
+            <BarangCard status={ppnType} type={purchaseType} />
           </Col>
         </div>
       </div>

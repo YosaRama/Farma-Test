@@ -3,7 +3,7 @@ import React from "react";
 import { Col, Form, Input, Row, Select } from "antd";
 const { Option } = Select;
 
-export default function SupplierCard() {
+export default function SupplierCard(props) {
   return (
     <Form
       name="supplier"
@@ -22,7 +22,7 @@ export default function SupplierCard() {
         <label>
           Supplier <span style={{ color: "red" }}>*</span>
         </label>
-        <Input />
+        <Input name="supplier_name" />
       </Form.Item>
       <Row gutter={16}>
         <Col lg={15} sm={24}>
@@ -43,7 +43,7 @@ export default function SupplierCard() {
         <Col lg={5} sm={24}>
           <Form.Item>
             <label>Harga Termasuk PPN</label>
-            <Select>
+            <Select onChange={props.onChange} defaultValue="Tidak">
               <Option value="ya">Ya</Option>
               <Option value="tidak">Tidak</Option>
             </Select>
