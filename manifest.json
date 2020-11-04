@@ -3,7 +3,7 @@
   "name": "Farmacare Test PWA",
   "icons": [
     {
-      "src": "/img/logo.png",
+      "src": "img/logo.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
