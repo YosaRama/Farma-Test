@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Col, Input, Row, Select, Form, Button } from "antd";
+import { Col, Input, Row, Select, Form, Button, DatePicker } from "antd";
 import { DeleteOutlined, PlusOutlined } from "@ant-design/icons";
 import ButtonGroup from "antd/lib/button/button-group";
 
@@ -37,7 +37,7 @@ export default function FormAdd(props) {
         >
           <Row>
             <Col lg={12} sm={24}>
-              <Input placeholder="MM" name="month" />
+              <DatePicker placeholder="MM" name="month" picker="month"/>
             </Col>
             <Col lg={12} sm={24}>
               <Input placeholder="DD" name="date" />
