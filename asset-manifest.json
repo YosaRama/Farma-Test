@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Farma-Test/static/css/main.6d6ab846.chunk.css",
+    "main.js": "/Farma-Test/static/js/main.be5c130c.chunk.js",
+    "main.js.map": "/Farma-Test/static/js/main.be5c130c.chunk.js.map",
+    "runtime-main.js": "/Farma-Test/static/js/runtime-main.9a4fd8cb.js",
+    "runtime-main.js.map": "/Farma-Test/static/js/runtime-main.9a4fd8cb.js.map",
+    "static/css/2.617c3bb8.chunk.css": "/Farma-Test/static/css/2.617c3bb8.chunk.css",
+    "static/js/2.aa447bd6.chunk.js": "/Farma-Test/static/js/2.aa447bd6.chunk.js",
+    "static/js/2.aa447bd6.chunk.js.map": "/Farma-Test/static/js/2.aa447bd6.chunk.js.map",
+    "index.html": "/Farma-Test/index.html",
+    "static/css/2.617c3bb8.chunk.css.map": "/Farma-Test/static/css/2.617c3bb8.chunk.css.map",
+    "static/css/main.6d6ab846.chunk.css.map": "/Farma-Test/static/css/main.6d6ab846.chunk.css.map",
+    "static/js/2.aa447bd6.chunk.js.LICENSE.txt": "/Farma-Test/static/js/2.aa447bd6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a4fd8cb.js",
+    "static/css/2.617c3bb8.chunk.css",
+    "static/js/2.aa447bd6.chunk.js",
+    "static/css/main.6d6ab846.chunk.css",
+    "static/js/main.be5c130c.chunk.js"
+  ]
+}
