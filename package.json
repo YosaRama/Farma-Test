@@ -12,7 +12,7 @@
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4"
   },
-  "homepage": "http://yosarama.github.io/Farma-Test",
+  "homepage": "http://YosaRama.github.io/Farma-Test",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
