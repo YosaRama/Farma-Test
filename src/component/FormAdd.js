@@ -37,7 +37,7 @@ export default function FormAdd(props) {
         >
           <Row>
             <Col lg={12} sm={24}>
-              <DatePicker placeholder="MM" name="month" picker="month"/>
+              <DatePicker placeholder="MM" name="month" picker="month" />
             </Col>
             <Col lg={12} sm={24}>
               <Input placeholder="DD" name="date" />
@@ -69,7 +69,7 @@ export default function FormAdd(props) {
       </Col>
       <Col lg={2} sm={24}>
         <Form.Item>
-          <Select>
+          <Select defaultValue="Pcs">
             <Option>Pcs</Option>
           </Select>
         </Form.Item>

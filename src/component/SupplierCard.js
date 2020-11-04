@@ -25,7 +25,7 @@ export default function SupplierCard(props) {
         <Input name="supplier_name" />
       </Form.Item>
       <Row gutter={16}>
-        <Col lg={15} sm={24}>
+        <Col lg={17} sm={24}>
           <Form.Item
             rules={[
               {
@@ -40,7 +40,7 @@ export default function SupplierCard(props) {
             <Input placeholder="No.Faktur" />
           </Form.Item>
         </Col>
-        <Col lg={5} sm={24}>
+        <Col lg={7} sm={24}>
           <Form.Item>
             <label>Harga Termasuk PPN</label>
             <Select onChange={props.onChange} defaultValue="Tidak">
